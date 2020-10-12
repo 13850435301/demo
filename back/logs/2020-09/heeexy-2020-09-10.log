@@ -1,0 +1,275 @@
+2020-09-10 09:53:52.929 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting MyApplication on DESKTOP-JOO9PTO with PID 11700 (E:\API-Interface\JAVA\vue\back\target\classes started by dell in E:\API-Interface\JAVA\vue\back)
+2020-09-10 09:53:52.939 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2020-09-10 09:53:54.932 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.1.32] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2020-09-10 09:53:55.182 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.1.32] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2020-09-10 09:53:55.203 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.1.32] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2020-09-10 09:53:55.852 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started MyApplication in 3.463 seconds (JVM running for 5.611)
+2020-09-10 09:58:11.482 INFO  --- [DruidDataSource.java:930][http-nio-8098-exec-1] - {dataSource-1} inited
+2020-09-10 09:58:11.583 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2020-09-10 09:58:11.601 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - ==> Parameters: admin(String), 0dd80a766592f28edddc716cf23ac35f(String)
+2020-09-10 09:58:11.633 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - <==      Total: 1
+2020-09-10 09:58:12.367 WARN  --- [DirectJDKLog.java:173][http-nio-8098-exec-1] - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [725] milliseconds.
+2020-09-10 09:58:12.414 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2020-09-10 09:58:12.414 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - ==> Parameters: admin(String)
+2020-09-10 09:58:12.418 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - <==      Total: 1
+2020-09-10 09:58:12.422 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2020-09-10 09:58:12.423 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - ==> Parameters: 
+2020-09-10 09:58:12.425 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - <==      Total: 25
+2020-09-10 09:58:12.427 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2020-09-10 09:58:12.427 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - ==> Parameters: 
+2020-09-10 09:58:12.429 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - <==      Total: 25
+2020-09-10 09:58:15.101 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-5] - ==>  Preparing: {call s_getSelectSpecsNameList()} 
+2020-09-10 09:58:15.110 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - ==>  Preparing: {call goods_category_list(?,?,?,?,?,?,?,?)} 
+2020-09-10 09:58:15.119 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-5] - ==> Parameters: 
+2020-09-10 09:58:15.120 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - ==> Parameters: null, null, null, null, 1(Integer), null, null, 0(Integer)
+2020-09-10 09:58:15.125 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-5] - <==      Total: 5
+2020-09-10 09:58:15.126 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-5] - <==    Updates: 0
+2020-09-10 09:58:15.135 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - <==      Total: 4
+2020-09-10 09:58:15.135 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - <==    Updates: 0
+2020-09-10 09:58:15.180 INFO  --- [UserRealm.java:46][http-nio-8098-exec-3] - permission的值为:{"menuList":["role","file","spu","category","specsname","user","article","specsvalue"],"roleId":1,"nickname":"超级用户23","roleName":"管理员","permissionList":["category:update","user:list","role:update","spu:add","specsvalue:add","spu:update","category:delete","spu:list","role:add","article:list","specsvalue:update","specsname:add","role:list","role:delete","file:upload","user:add","article:add","specsvalue:list","specsvalue:delete","user:update","specsname:list","article:update","specsname:update","category:add","category:list"],"userId":10003}
+2020-09-10 09:58:15.180 INFO  --- [UserRealm.java:47][http-nio-8098-exec-3] - 本用户权限为:[category:update, user:list, role:update, spu:add, specsvalue:add, spu:update, category:delete, spu:list, role:add, article:list, specsvalue:update, specsname:add, role:list, role:delete, file:upload, user:add, article:add, specsvalue:list, specsvalue:delete, user:update, specsname:list, article:update, specsname:update, category:add, category:list]
+2020-09-10 09:58:15.188 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - ==>  Preparing: {call s_goods_spu_list(?,?,?,?,?,?,?,?)} 
+2020-09-10 09:58:15.193 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - ==> Parameters: null, null, (String), null, null, 1(Integer), 50(Integer), 1(Integer)
+2020-09-10 09:58:15.196 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - <==      Total: 0
+2020-09-10 09:58:15.196 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - <==    Updates: 0
+2020-09-10 10:39:23.390 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-7] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2020-09-10 10:39:23.390 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-7] - ==> Parameters: admin(String), 0dd80a766592f28edddc716cf23ac35f(String)
+2020-09-10 10:39:23.392 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-7] - <==      Total: 1
+2020-09-10 10:39:23.404 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-8] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2020-09-10 10:39:23.405 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-8] - ==> Parameters: admin(String)
+2020-09-10 10:39:23.409 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-8] - <==      Total: 1
+2020-09-10 10:39:23.409 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-8] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2020-09-10 10:39:23.409 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-8] - ==> Parameters: 
+2020-09-10 10:39:23.410 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-8] - <==      Total: 25
+2020-09-10 10:39:23.411 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-8] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2020-09-10 10:39:23.411 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-8] - ==> Parameters: 
+2020-09-10 10:39:23.413 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-8] - <==      Total: 25
+2020-09-10 10:39:30.001 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - ==>  Preparing: {call s_getSelectSpecsNameList()} 
+2020-09-10 10:39:30.001 INFO  --- [UserRealm.java:46][http-nio-8098-exec-9] - permission的值为:{"menuList":["role","file","spu","category","specsname","user","article","specsvalue"],"roleId":1,"nickname":"超级用户23","roleName":"管理员","permissionList":["category:update","user:list","role:update","spu:add","specsvalue:add","spu:update","category:delete","spu:list","role:add","article:list","specsvalue:update","specsname:add","role:list","role:delete","file:upload","user:add","article:add","specsvalue:list","specsvalue:delete","user:update","specsname:list","article:update","specsname:update","category:add","category:list"],"userId":10003}
+2020-09-10 10:39:30.001 INFO  --- [UserRealm.java:47][http-nio-8098-exec-9] - 本用户权限为:[category:update, user:list, role:update, spu:add, specsvalue:add, spu:update, category:delete, spu:list, role:add, article:list, specsvalue:update, specsname:add, role:list, role:delete, file:upload, user:add, article:add, specsvalue:list, specsvalue:delete, user:update, specsname:list, article:update, specsname:update, category:add, category:list]
+2020-09-10 10:39:30.005 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - ==> Parameters: 
+2020-09-10 10:39:30.005 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-10] - ==>  Preparing: {call goods_category_list(?,?,?,?,?,?,?,?)} 
+2020-09-10 10:39:30.007 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - <==      Total: 5
+2020-09-10 10:39:30.008 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - <==    Updates: 0
+2020-09-10 10:39:30.008 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-9] - ==>  Preparing: {call s_goods_spu_list(?,?,?,?,?,?,?,?)} 
+2020-09-10 10:39:30.010 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-10] - ==> Parameters: null, null, null, null, 1(Integer), null, null, 0(Integer)
+2020-09-10 10:39:30.015 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-9] - ==> Parameters: null, null, (String), null, null, 1(Integer), 50(Integer), 1(Integer)
+2020-09-10 10:39:30.020 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-10] - <==      Total: 4
+2020-09-10 10:39:30.021 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-10] - <==    Updates: 0
+2020-09-10 10:39:30.022 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-9] - <==      Total: 0
+2020-09-10 10:39:30.023 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-9] - <==    Updates: 0
+2020-09-10 10:40:37.308 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2020-09-10 10:40:37.309 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - ==> Parameters: admin(String)
+2020-09-10 10:40:37.312 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - <==      Total: 1
+2020-09-10 10:40:37.313 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2020-09-10 10:40:37.313 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - ==> Parameters: 
+2020-09-10 10:40:37.316 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - <==      Total: 25
+2020-09-10 10:40:37.317 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2020-09-10 10:40:37.317 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - ==> Parameters: 
+2020-09-10 10:40:37.318 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - <==      Total: 25
+2020-09-10 10:40:37.456 INFO  --- [UserRealm.java:46][http-nio-8098-exec-5] - permission的值为:{"menuList":["role","file","spu","category","specsname","user","article","specsvalue"],"roleId":1,"nickname":"超级用户23","roleName":"管理员","permissionList":["category:update","user:list","role:update","spu:add","specsvalue:add","spu:update","category:delete","spu:list","role:add","article:list","specsvalue:update","specsname:add","role:list","role:delete","file:upload","user:add","article:add","specsvalue:list","specsvalue:delete","user:update","specsname:list","article:update","specsname:update","category:add","category:list"],"userId":10003}
+2020-09-10 10:40:37.456 INFO  --- [UserRealm.java:47][http-nio-8098-exec-5] - 本用户权限为:[category:update, user:list, role:update, spu:add, specsvalue:add, spu:update, category:delete, spu:list, role:add, article:list, specsvalue:update, specsname:add, role:list, role:delete, file:upload, user:add, article:add, specsvalue:list, specsvalue:delete, user:update, specsname:list, article:update, specsname:update, category:add, category:list]
+2020-09-10 10:40:37.457 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-5] - ==>  Preparing: {call s_goods_spu_list(?,?,?,?,?,?,?,?)} 
+2020-09-10 10:40:37.460 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-5] - ==> Parameters: null, null, (String), null, null, 1(Integer), 50(Integer), 1(Integer)
+2020-09-10 10:40:37.461 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-5] - <==      Total: 0
+2020-09-10 10:40:37.462 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-5] - <==    Updates: 0
+2020-09-10 10:40:37.757 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - ==>  Preparing: {call s_getSelectSpecsNameList()} 
+2020-09-10 10:40:37.758 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - ==>  Preparing: {call goods_category_list(?,?,?,?,?,?,?,?)} 
+2020-09-10 10:40:37.759 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - ==> Parameters: 
+2020-09-10 10:40:37.760 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - ==> Parameters: null, null, null, null, 1(Integer), null, null, 0(Integer)
+2020-09-10 10:40:37.760 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - <==      Total: 5
+2020-09-10 10:40:37.761 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - <==    Updates: 0
+2020-09-10 10:40:37.762 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - <==      Total: 4
+2020-09-10 10:40:37.765 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - <==    Updates: 0
+2020-09-10 10:46:43.649 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2020-09-10 10:46:43.650 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - ==> Parameters: admin(String)
+2020-09-10 10:46:43.652 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - <==      Total: 1
+2020-09-10 10:46:43.653 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2020-09-10 10:46:43.654 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - ==> Parameters: 
+2020-09-10 10:46:43.655 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - <==      Total: 25
+2020-09-10 10:46:43.655 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2020-09-10 10:46:43.656 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - ==> Parameters: 
+2020-09-10 10:46:43.658 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - <==      Total: 25
+2020-09-10 10:46:43.801 INFO  --- [UserRealm.java:46][http-nio-8098-exec-7] - permission的值为:{"menuList":["role","file","spu","category","specsname","user","article","specsvalue"],"roleId":1,"nickname":"超级用户23","roleName":"管理员","permissionList":["category:update","user:list","role:update","spu:add","specsvalue:add","spu:update","category:delete","spu:list","role:add","article:list","specsvalue:update","specsname:add","role:list","role:delete","file:upload","user:add","article:add","specsvalue:list","specsvalue:delete","user:update","specsname:list","article:update","specsname:update","category:add","category:list"],"userId":10003}
+2020-09-10 10:46:43.802 INFO  --- [UserRealm.java:47][http-nio-8098-exec-7] - 本用户权限为:[category:update, user:list, role:update, spu:add, specsvalue:add, spu:update, category:delete, spu:list, role:add, article:list, specsvalue:update, specsname:add, role:list, role:delete, file:upload, user:add, article:add, specsvalue:list, specsvalue:delete, user:update, specsname:list, article:update, specsname:update, category:add, category:list]
+2020-09-10 10:46:43.802 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-7] - ==>  Preparing: {call s_goods_spu_list(?,?,?,?,?,?,?,?)} 
+2020-09-10 10:46:43.805 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-7] - ==> Parameters: null, null, (String), null, null, 1(Integer), 50(Integer), 1(Integer)
+2020-09-10 10:46:43.810 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-7] - <==      Total: 0
+2020-09-10 10:46:43.811 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-7] - <==    Updates: 0
+2020-09-10 10:46:44.105 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - ==>  Preparing: {call s_getSelectSpecsNameList()} 
+2020-09-10 10:46:44.106 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-8] - ==>  Preparing: {call goods_category_list(?,?,?,?,?,?,?,?)} 
+2020-09-10 10:46:44.108 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - ==> Parameters: 
+2020-09-10 10:46:44.110 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-8] - ==> Parameters: null, null, null, null, 1(Integer), null, null, 0(Integer)
+2020-09-10 10:46:44.110 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - <==      Total: 5
+2020-09-10 10:46:44.111 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - <==    Updates: 0
+2020-09-10 10:46:44.116 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-8] - <==      Total: 4
+2020-09-10 10:46:44.116 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-8] - <==    Updates: 0
+2020-09-10 10:51:15.868 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-10] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2020-09-10 10:51:15.868 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-10] - ==> Parameters: admin(String)
+2020-09-10 10:51:15.870 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-10] - <==      Total: 1
+2020-09-10 10:51:15.870 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-10] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2020-09-10 10:51:15.870 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-10] - ==> Parameters: 
+2020-09-10 10:51:15.871 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-10] - <==      Total: 25
+2020-09-10 10:51:15.872 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-10] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2020-09-10 10:51:15.872 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-10] - ==> Parameters: 
+2020-09-10 10:51:15.873 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-10] - <==      Total: 25
+2020-09-10 10:51:16.178 INFO  --- [UserRealm.java:46][http-nio-8098-exec-9] - permission的值为:{"menuList":["role","file","spu","category","specsname","user","article","specsvalue"],"roleId":1,"nickname":"超级用户23","roleName":"管理员","permissionList":["category:update","user:list","role:update","spu:add","specsvalue:add","spu:update","category:delete","spu:list","role:add","article:list","specsvalue:update","specsname:add","role:list","role:delete","file:upload","user:add","article:add","specsvalue:list","specsvalue:delete","user:update","specsname:list","article:update","specsname:update","category:add","category:list"],"userId":10003}
+2020-09-10 10:51:16.179 INFO  --- [UserRealm.java:47][http-nio-8098-exec-9] - 本用户权限为:[category:update, user:list, role:update, spu:add, specsvalue:add, spu:update, category:delete, spu:list, role:add, article:list, specsvalue:update, specsname:add, role:list, role:delete, file:upload, user:add, article:add, specsvalue:list, specsvalue:delete, user:update, specsname:list, article:update, specsname:update, category:add, category:list]
+2020-09-10 10:51:16.179 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-9] - ==>  Preparing: {call s_goods_spu_list(?,?,?,?,?,?,?,?)} 
+2020-09-10 10:51:16.184 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-9] - ==> Parameters: null, null, (String), null, null, 1(Integer), 50(Integer), 1(Integer)
+2020-09-10 10:51:16.185 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-9] - <==      Total: 0
+2020-09-10 10:51:16.185 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-9] - <==    Updates: 0
+2020-09-10 10:51:16.309 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-5] - ==>  Preparing: {call s_getSelectSpecsNameList()} 
+2020-09-10 10:51:16.310 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - ==>  Preparing: {call goods_category_list(?,?,?,?,?,?,?,?)} 
+2020-09-10 10:51:16.311 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-5] - ==> Parameters: 
+2020-09-10 10:51:16.311 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-5] - <==      Total: 5
+2020-09-10 10:51:16.312 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - ==> Parameters: null, null, null, null, 1(Integer), null, null, 0(Integer)
+2020-09-10 10:51:16.312 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-5] - <==    Updates: 0
+2020-09-10 10:51:16.313 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - <==      Total: 4
+2020-09-10 10:51:16.315 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - <==    Updates: 0
+2020-09-10 10:54:39.902 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2020-09-10 10:54:39.904 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - ==> Parameters: admin(String)
+2020-09-10 10:54:39.906 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - <==      Total: 1
+2020-09-10 10:54:39.908 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2020-09-10 10:54:39.909 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - ==> Parameters: 
+2020-09-10 10:54:39.910 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - <==      Total: 25
+2020-09-10 10:54:39.911 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2020-09-10 10:54:39.911 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - ==> Parameters: 
+2020-09-10 10:54:39.912 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - <==      Total: 25
+2020-09-10 10:54:40.213 INFO  --- [UserRealm.java:46][http-nio-8098-exec-4] - permission的值为:{"menuList":["role","file","spu","category","specsname","user","article","specsvalue"],"roleId":1,"nickname":"超级用户23","roleName":"管理员","permissionList":["category:update","user:list","role:update","spu:add","specsvalue:add","spu:update","category:delete","spu:list","role:add","article:list","specsvalue:update","specsname:add","role:list","role:delete","file:upload","user:add","article:add","specsvalue:list","specsvalue:delete","user:update","specsname:list","article:update","specsname:update","category:add","category:list"],"userId":10003}
+2020-09-10 10:54:40.213 INFO  --- [UserRealm.java:47][http-nio-8098-exec-4] - 本用户权限为:[category:update, user:list, role:update, spu:add, specsvalue:add, spu:update, category:delete, spu:list, role:add, article:list, specsvalue:update, specsname:add, role:list, role:delete, file:upload, user:add, article:add, specsvalue:list, specsvalue:delete, user:update, specsname:list, article:update, specsname:update, category:add, category:list]
+2020-09-10 10:54:40.214 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - ==>  Preparing: {call s_goods_spu_list(?,?,?,?,?,?,?,?)} 
+2020-09-10 10:54:40.216 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - ==> Parameters: null, null, (String), null, null, 1(Integer), 50(Integer), 1(Integer)
+2020-09-10 10:54:40.225 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - <==      Total: 0
+2020-09-10 10:54:40.225 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - <==    Updates: 0
+2020-09-10 10:54:40.349 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-7] - ==>  Preparing: {call s_getSelectSpecsNameList()} 
+2020-09-10 10:54:40.350 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - ==>  Preparing: {call goods_category_list(?,?,?,?,?,?,?,?)} 
+2020-09-10 10:54:40.351 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-7] - ==> Parameters: 
+2020-09-10 10:54:40.352 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-7] - <==      Total: 5
+2020-09-10 10:54:40.352 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-7] - <==    Updates: 0
+2020-09-10 10:54:40.353 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - ==> Parameters: null, null, null, null, 1(Integer), null, null, 0(Integer)
+2020-09-10 10:54:40.357 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - <==      Total: 4
+2020-09-10 10:54:40.357 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - <==    Updates: 0
+2020-09-10 10:58:48.767 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2020-09-10 10:58:48.768 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - ==> Parameters: admin(String)
+2020-09-10 10:58:48.769 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - <==      Total: 1
+2020-09-10 10:58:48.770 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2020-09-10 10:58:48.770 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - ==> Parameters: 
+2020-09-10 10:58:48.771 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - <==      Total: 25
+2020-09-10 10:58:48.772 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2020-09-10 10:58:48.773 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - ==> Parameters: 
+2020-09-10 10:58:48.774 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - <==      Total: 25
+2020-09-10 10:58:48.922 INFO  --- [UserRealm.java:46][http-nio-8098-exec-8] - permission的值为:{"menuList":["role","file","spu","category","specsname","user","article","specsvalue"],"roleId":1,"nickname":"超级用户23","roleName":"管理员","permissionList":["category:update","user:list","role:update","spu:add","specsvalue:add","spu:update","category:delete","spu:list","role:add","article:list","specsvalue:update","specsname:add","role:list","role:delete","file:upload","user:add","article:add","specsvalue:list","specsvalue:delete","user:update","specsname:list","article:update","specsname:update","category:add","category:list"],"userId":10003}
+2020-09-10 10:58:48.922 INFO  --- [UserRealm.java:47][http-nio-8098-exec-8] - 本用户权限为:[category:update, user:list, role:update, spu:add, specsvalue:add, spu:update, category:delete, spu:list, role:add, article:list, specsvalue:update, specsname:add, role:list, role:delete, file:upload, user:add, article:add, specsvalue:list, specsvalue:delete, user:update, specsname:list, article:update, specsname:update, category:add, category:list]
+2020-09-10 10:58:48.922 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-8] - ==>  Preparing: {call s_goods_spu_list(?,?,?,?,?,?,?,?)} 
+2020-09-10 10:58:48.925 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-8] - ==> Parameters: null, null, (String), null, null, 1(Integer), 50(Integer), 1(Integer)
+2020-09-10 10:58:48.928 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-8] - <==      Total: 0
+2020-09-10 10:58:48.929 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-8] - <==    Updates: 0
+2020-09-10 10:58:49.225 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-9] - ==>  Preparing: {call goods_category_list(?,?,?,?,?,?,?,?)} 
+2020-09-10 10:58:49.228 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-10] - ==>  Preparing: {call s_getSelectSpecsNameList()} 
+2020-09-10 10:58:49.230 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-9] - ==> Parameters: null, null, null, null, 1(Integer), null, null, 0(Integer)
+2020-09-10 10:58:49.232 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-10] - ==> Parameters: 
+2020-09-10 10:58:49.233 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-10] - <==      Total: 5
+2020-09-10 10:58:49.233 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-10] - <==    Updates: 0
+2020-09-10 10:58:49.233 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-9] - <==      Total: 4
+2020-09-10 10:58:49.233 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-9] - <==    Updates: 0
+2020-09-10 11:29:57.568 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2020-09-10 11:29:57.569 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - ==> Parameters: admin(String), 0dd80a766592f28edddc716cf23ac35f(String)
+2020-09-10 11:29:57.570 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - <==      Total: 1
+2020-09-10 11:29:57.885 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2020-09-10 11:29:57.885 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - ==> Parameters: admin(String)
+2020-09-10 11:29:57.886 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - <==      Total: 1
+2020-09-10 11:29:57.888 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2020-09-10 11:29:57.888 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - ==> Parameters: 
+2020-09-10 11:29:57.889 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - <==      Total: 25
+2020-09-10 11:29:57.889 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2020-09-10 11:29:57.889 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - ==> Parameters: 
+2020-09-10 11:29:57.889 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - <==      Total: 25
+2020-09-10 11:30:00.267 INFO  --- [UserRealm.java:46][http-nio-8098-exec-4] - permission的值为:{"menuList":["role","file","spu","category","specsname","user","article","specsvalue"],"roleId":1,"nickname":"超级用户23","roleName":"管理员","permissionList":["category:update","user:list","role:update","spu:add","specsvalue:add","spu:update","category:delete","spu:list","role:add","article:list","specsvalue:update","specsname:add","role:list","role:delete","file:upload","user:add","article:add","specsvalue:list","specsvalue:delete","user:update","specsname:list","article:update","specsname:update","category:add","category:list"],"userId":10003}
+2020-09-10 11:30:00.268 INFO  --- [UserRealm.java:47][http-nio-8098-exec-4] - 本用户权限为:[category:update, user:list, role:update, spu:add, specsvalue:add, spu:update, category:delete, spu:list, role:add, article:list, specsvalue:update, specsname:add, role:list, role:delete, file:upload, user:add, article:add, specsvalue:list, specsvalue:delete, user:update, specsname:list, article:update, specsname:update, category:add, category:list]
+2020-09-10 11:30:00.269 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - ==>  Preparing: {call s_goods_spu_list(?,?,?,?,?,?,?,?)} 
+2020-09-10 11:30:00.273 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - ==> Parameters: null, null, (String), null, null, 1(Integer), 50(Integer), 1(Integer)
+2020-09-10 11:30:00.275 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - <==      Total: 0
+2020-09-10 11:30:00.276 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - <==    Updates: 0
+2020-09-10 11:30:00.571 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - ==>  Preparing: {call s_getSelectSpecsNameList()} 
+2020-09-10 11:30:00.573 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - ==> Parameters: 
+2020-09-10 11:30:00.573 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-7] - ==>  Preparing: {call goods_category_list(?,?,?,?,?,?,?,?)} 
+2020-09-10 11:30:00.573 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - <==      Total: 5
+2020-09-10 11:30:00.574 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - <==    Updates: 0
+2020-09-10 11:30:00.576 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-7] - ==> Parameters: null, null, null, null, 1(Integer), null, null, 0(Integer)
+2020-09-10 11:30:00.579 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-7] - <==      Total: 4
+2020-09-10 11:30:00.579 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-7] - <==    Updates: 0
+2020-09-10 11:32:29.897 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2020-09-10 11:32:29.897 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - ==> Parameters: admin(String)
+2020-09-10 11:32:29.902 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - <==      Total: 1
+2020-09-10 11:32:29.903 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2020-09-10 11:32:29.904 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - ==> Parameters: 
+2020-09-10 11:32:29.905 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - <==      Total: 25
+2020-09-10 11:32:29.905 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2020-09-10 11:32:29.906 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - ==> Parameters: 
+2020-09-10 11:32:29.906 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - <==      Total: 25
+2020-09-10 11:32:30.046 INFO  --- [UserRealm.java:46][http-nio-8098-exec-8] - permission的值为:{"menuList":["role","file","spu","category","specsname","user","article","specsvalue"],"roleId":1,"nickname":"超级用户23","roleName":"管理员","permissionList":["category:update","user:list","role:update","spu:add","specsvalue:add","spu:update","category:delete","spu:list","role:add","article:list","specsvalue:update","specsname:add","role:list","role:delete","file:upload","user:add","article:add","specsvalue:list","specsvalue:delete","user:update","specsname:list","article:update","specsname:update","category:add","category:list"],"userId":10003}
+2020-09-10 11:32:30.046 INFO  --- [UserRealm.java:47][http-nio-8098-exec-8] - 本用户权限为:[category:update, user:list, role:update, spu:add, specsvalue:add, spu:update, category:delete, spu:list, role:add, article:list, specsvalue:update, specsname:add, role:list, role:delete, file:upload, user:add, article:add, specsvalue:list, specsvalue:delete, user:update, specsname:list, article:update, specsname:update, category:add, category:list]
+2020-09-10 11:32:30.048 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-8] - ==>  Preparing: {call s_goods_spu_list(?,?,?,?,?,?,?,?)} 
+2020-09-10 11:32:30.050 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-8] - ==> Parameters: null, null, (String), null, null, 1(Integer), 50(Integer), 1(Integer)
+2020-09-10 11:32:30.054 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-8] - <==      Total: 0
+2020-09-10 11:32:30.054 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-8] - <==    Updates: 0
+2020-09-10 11:32:30.347 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-10] - ==>  Preparing: {call goods_category_list(?,?,?,?,?,?,?,?)} 
+2020-09-10 11:32:30.348 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-9] - ==>  Preparing: {call s_getSelectSpecsNameList()} 
+2020-09-10 11:32:30.349 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-10] - ==> Parameters: null, null, null, null, 1(Integer), null, null, 0(Integer)
+2020-09-10 11:32:30.350 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-9] - ==> Parameters: 
+2020-09-10 11:32:30.350 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-9] - <==      Total: 5
+2020-09-10 11:32:30.350 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-10] - <==      Total: 4
+2020-09-10 11:32:30.351 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-9] - <==    Updates: 0
+2020-09-10 11:32:30.351 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-10] - <==    Updates: 0
+2020-09-10 11:42:11.397 INFO  --- [UserRealm.java:46][http-nio-8098-exec-5] - permission的值为:{"menuList":["role","file","spu","category","specsname","user","article","specsvalue"],"roleId":1,"nickname":"超级用户23","roleName":"管理员","permissionList":["category:update","user:list","role:update","spu:add","specsvalue:add","spu:update","category:delete","spu:list","role:add","article:list","specsvalue:update","specsname:add","role:list","role:delete","file:upload","user:add","article:add","specsvalue:list","specsvalue:delete","user:update","specsname:list","article:update","specsname:update","category:add","category:list"],"userId":10003}
+2020-09-10 11:42:11.398 INFO  --- [UserRealm.java:47][http-nio-8098-exec-5] - 本用户权限为:[category:update, user:list, role:update, spu:add, specsvalue:add, spu:update, category:delete, spu:list, role:add, article:list, specsvalue:update, specsname:add, role:list, role:delete, file:upload, user:add, article:add, specsvalue:list, specsvalue:delete, user:update, specsname:list, article:update, specsname:update, category:add, category:list]
+2020-09-10 11:42:11.400 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - ==>  Preparing: {call goods_category_list(?,?,?,?,?,?,?,?)} 
+2020-09-10 11:42:11.401 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-5] - ==>  Preparing: {call s_goods_spu_list(?,?,?,?,?,?,?,?)} 
+2020-09-10 11:42:11.403 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - ==> Parameters: null, null, null, null, 1(Integer), null, null, 0(Integer)
+2020-09-10 11:42:11.403 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-5] - ==> Parameters: null, null, (String), null, null, 1(Integer), 50(Integer), 1(Integer)
+2020-09-10 11:42:11.405 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-5] - <==      Total: 0
+2020-09-10 11:42:11.405 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-5] - <==    Updates: 0
+2020-09-10 11:42:11.406 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - <==      Total: 4
+2020-09-10 11:42:11.406 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - <==    Updates: 0
+2020-09-10 11:42:11.697 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - ==>  Preparing: {call s_getSelectSpecsNameList()} 
+2020-09-10 11:42:11.699 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - ==> Parameters: 
+2020-09-10 11:42:11.700 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - <==      Total: 5
+2020-09-10 11:42:11.700 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - <==    Updates: 0
+2020-09-10 11:42:32.101 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - ==>  Preparing: {call goods_category_list(?,?,?,?,?,?,?,?)} 
+2020-09-10 11:42:32.101 INFO  --- [UserRealm.java:46][http-nio-8098-exec-4] - permission的值为:{"menuList":["role","file","spu","category","specsname","user","article","specsvalue"],"roleId":1,"nickname":"超级用户23","roleName":"管理员","permissionList":["category:update","user:list","role:update","spu:add","specsvalue:add","spu:update","category:delete","spu:list","role:add","article:list","specsvalue:update","specsname:add","role:list","role:delete","file:upload","user:add","article:add","specsvalue:list","specsvalue:delete","user:update","specsname:list","article:update","specsname:update","category:add","category:list"],"userId":10003}
+2020-09-10 11:42:32.102 INFO  --- [UserRealm.java:47][http-nio-8098-exec-4] - 本用户权限为:[category:update, user:list, role:update, spu:add, specsvalue:add, spu:update, category:delete, spu:list, role:add, article:list, specsvalue:update, specsname:add, role:list, role:delete, file:upload, user:add, article:add, specsvalue:list, specsvalue:delete, user:update, specsname:list, article:update, specsname:update, category:add, category:list]
+2020-09-10 11:42:32.103 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - ==>  Preparing: {call s_goods_spu_list(?,?,?,?,?,?,?,?)} 
+2020-09-10 11:42:32.104 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - ==> Parameters: null, null, null, null, 1(Integer), null, null, 0(Integer)
+2020-09-10 11:42:32.107 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - ==> Parameters: null, null, (String), null, null, 1(Integer), 50(Integer), 1(Integer)
+2020-09-10 11:42:32.107 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - <==      Total: 4
+2020-09-10 11:42:32.108 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - <==    Updates: 0
+2020-09-10 11:42:32.108 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - <==      Total: 0
+2020-09-10 11:42:32.108 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - <==    Updates: 0
+2020-09-10 11:42:32.405 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-7] - ==>  Preparing: {call s_getSelectSpecsNameList()} 
+2020-09-10 11:42:32.407 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-7] - ==> Parameters: 
+2020-09-10 11:42:32.408 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-7] - <==      Total: 5
+2020-09-10 11:42:32.408 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-7] - <==    Updates: 0
+2020-09-10 11:50:45.185 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2020-09-10 11:50:45.186 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - ==> Parameters: admin(String)
+2020-09-10 11:50:45.188 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - <==      Total: 1
+2020-09-10 11:50:45.189 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2020-09-10 11:50:45.191 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - ==> Parameters: 
+2020-09-10 11:50:45.192 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - <==      Total: 25
+2020-09-10 11:50:45.193 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2020-09-10 11:50:45.193 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - ==> Parameters: 
+2020-09-10 11:50:45.194 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - <==      Total: 25
+2020-09-10 11:50:45.331 INFO  --- [UserRealm.java:46][http-nio-8098-exec-8] - permission的值为:{"menuList":["role","file","spu","category","specsname","user","article","specsvalue"],"roleId":1,"nickname":"超级用户23","roleName":"管理员","permissionList":["category:update","user:list","role:update","spu:add","specsvalue:add","spu:update","category:delete","spu:list","role:add","article:list","specsvalue:update","specsname:add","role:list","role:delete","file:upload","user:add","article:add","specsvalue:list","specsvalue:delete","user:update","specsname:list","article:update","specsname:update","category:add","category:list"],"userId":10003}
+2020-09-10 11:50:45.331 INFO  --- [UserRealm.java:47][http-nio-8098-exec-8] - 本用户权限为:[category:update, user:list, role:update, spu:add, specsvalue:add, spu:update, category:delete, spu:list, role:add, article:list, specsvalue:update, specsname:add, role:list, role:delete, file:upload, user:add, article:add, specsvalue:list, specsvalue:delete, user:update, specsname:list, article:update, specsname:update, category:add, category:list]
+2020-09-10 11:50:45.332 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-8] - ==>  Preparing: {call s_goods_spu_list(?,?,?,?,?,?,?,?)} 
+2020-09-10 11:50:45.335 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-8] - ==> Parameters: null, null, (String), null, null, 1(Integer), 50(Integer), 1(Integer)
+2020-09-10 11:50:45.336 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-8] - <==      Total: 0
+2020-09-10 11:50:45.337 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-8] - <==    Updates: 0
+2020-09-10 11:50:45.634 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-9] - ==>  Preparing: {call s_getSelectSpecsNameList()} 
+2020-09-10 11:50:45.635 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-10] - ==>  Preparing: {call goods_category_list(?,?,?,?,?,?,?,?)} 
+2020-09-10 11:50:45.635 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-9] - ==> Parameters: 
+2020-09-10 11:50:45.636 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-9] - <==      Total: 5
+2020-09-10 11:50:45.636 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-9] - <==    Updates: 0
+2020-09-10 11:50:45.636 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-10] - ==> Parameters: null, null, null, null, 1(Integer), null, null, 0(Integer)
+2020-09-10 11:50:45.638 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-10] - <==      Total: 4
+2020-09-10 11:50:45.638 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-10] - <==    Updates: 0

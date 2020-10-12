@@ -1,0 +1,44 @@
+
+server:
+  port: 8098
+
+spring:
+  application:
+    name: example
+  servlet:
+    multipart:
+      max-file-size: 100MB # 最大支持文件大小
+      max-request-size: 100MB # 最大支持请求大小
+  datasource:
+      url: jdbc:mysql://127.0.0.1:3306/example?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
+      username: root
+      password: 123456
+      hikari:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource
+      dbcp2:
+        min-idle: 5
+        initial-size: 5
+        max-total: 5
+        max-wait-millis: 200
+  thymeleaf:
+    cache: false
+mybatis:
+   mapperLocations: classpath:/mapper/*.xml
+
+shiro:
+   salt : 7e4889fc1b4de7bac04a2942b49217c6
+
+# 分布式文件系统FDFS配置
+fdfs:
+  soTimeout: 1500 #socket连接超时时长
+  connectTimeout: 600 #连接tracker服务器超时时长
+  reqHost: 192.168.110.128   #nginx访问地址
+  reqPort: 80              #nginx访问端口
+  thumbImage: #缩略图生成参数，可选
+    width: 150
+    height: 150
+  trackerList: 192.168.110.128:22122
+
+
+

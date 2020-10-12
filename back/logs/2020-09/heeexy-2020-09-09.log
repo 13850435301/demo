@@ -1,0 +1,589 @@
+2020-09-09 09:33:27.750 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting MyApplication on DESKTOP-JOO9PTO with PID 13928 (E:\API-Interface\JAVA\vue\back\target\classes started by dell in E:\API-Interface\JAVA\vue\back)
+2020-09-09 09:33:27.752 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2020-09-09 09:33:29.512 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.1.32] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2020-09-09 09:33:29.767 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.1.32] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2020-09-09 09:33:29.778 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.1.32] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2020-09-09 09:33:30.430 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started MyApplication in 3.224 seconds (JVM running for 5.812)
+2020-09-09 09:34:46.886 INFO  --- [DruidDataSource.java:930][http-nio-8098-exec-1] - {dataSource-1} inited
+2020-09-09 09:34:46.979 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2020-09-09 09:34:46.996 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - ==> Parameters: admin(String), 0dd80a766592f28edddc716cf23ac35f(String)
+2020-09-09 09:34:47.040 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - <==      Total: 1
+2020-09-09 09:34:47.747 WARN  --- [DirectJDKLog.java:173][http-nio-8098-exec-1] - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [701] milliseconds.
+2020-09-09 09:34:47.823 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2020-09-09 09:34:47.824 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - ==> Parameters: admin(String)
+2020-09-09 09:34:47.830 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - <==      Total: 1
+2020-09-09 09:34:47.834 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2020-09-09 09:34:47.835 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - ==> Parameters: 
+2020-09-09 09:34:47.838 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - <==      Total: 25
+2020-09-09 09:34:47.840 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2020-09-09 09:34:47.840 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - ==> Parameters: 
+2020-09-09 09:34:47.842 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - <==      Total: 25
+2020-09-09 09:34:50.716 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - ==>  Preparing: {call s_getSelectSpecsNameList()} 
+2020-09-09 09:34:50.723 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - ==>  Preparing: {call goods_category_list(?,?,?,?,?,?,?,?)} 
+2020-09-09 09:34:50.745 INFO  --- [UserRealm.java:46][http-nio-8098-exec-4] - permission的值为:{"menuList":["role","file","spu","category","specsname","user","article","specsvalue"],"roleId":1,"nickname":"超级用户23","roleName":"管理员","permissionList":["category:update","user:list","role:update","spu:add","specsvalue:add","spu:update","category:delete","spu:list","role:add","article:list","specsvalue:update","specsname:add","role:list","role:delete","file:upload","user:add","article:add","specsvalue:list","specsvalue:delete","user:update","specsname:list","article:update","specsname:update","category:add","category:list"],"userId":10003}
+2020-09-09 09:34:50.745 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - ==> Parameters: 
+2020-09-09 09:34:50.745 INFO  --- [UserRealm.java:47][http-nio-8098-exec-4] - 本用户权限为:[category:update, user:list, role:update, spu:add, specsvalue:add, spu:update, category:delete, spu:list, role:add, article:list, specsvalue:update, specsname:add, role:list, role:delete, file:upload, user:add, article:add, specsvalue:list, specsvalue:delete, user:update, specsname:list, article:update, specsname:update, category:add, category:list]
+2020-09-09 09:34:50.745 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - ==> Parameters: null, null, null, null, 1(Integer), null, null, 0(Integer)
+2020-09-09 09:34:50.759 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - ==>  Preparing: {call s_goods_spu_list(?,?,?,?,?,?,?,?)} 
+2020-09-09 09:34:50.760 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - <==      Total: 4
+2020-09-09 09:34:50.761 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - <==    Updates: 0
+2020-09-09 09:34:50.770 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - ==> Parameters: null, null, (String), null, null, 1(Integer), 50(Integer), 1(Integer)
+2020-09-09 09:34:50.781 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - <==      Total: 0
+2020-09-09 09:34:50.781 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - <==    Updates: 0
+2020-09-09 09:34:50.855 ERROR --- [GlobalExceptionHandler.java:43][http-nio-8098-exec-6] - 异常
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: PROCEDURE example.s_getSelectSpecsNameList does not exist
+### The error may exist in file [E:\API-Interface\JAVA\vue\back\target\classes\mapper\GoodsMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: {call s_getSelectSpecsNameList()}
+### Cause: java.sql.SQLSyntaxErrorException: PROCEDURE example.s_getSelectSpecsNameList does not exist
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: PROCEDURE example.s_getSelectSpecsNameList does not exist
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:93)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy54.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:230)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:139)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:76)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy74.s_getSelectSpecsNameList(Unknown Source)
+	at com.heeexy.example.service.impl.GoodsServiceImpl.s_getSelectSpecsNameList(GoodsServiceImpl.java:120)
+	at com.heeexy.example.controller.GoodsController.selectListSpecsName(GoodsController.java:212)
+	at com.heeexy.example.controller.GoodsController$$FastClassBySpringCGLIB$$4dc075c7.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:684)
+	at com.heeexy.example.controller.GoodsController$$EnhancerBySpringCGLIB$$dd21730.selectListSpecsName(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:215)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:142)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.sql.SQLSyntaxErrorException: PROCEDURE example.s_getSelectSpecsNameList does not exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at com.mysql.cj.jdbc.CallableStatement.execute(CallableStatement.java:845)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:498)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy90.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.CallableStatementHandler.query(CallableStatementHandler.java:67)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:326)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 83 common frames omitted
+2020-09-09 09:34:50.857 WARN  --- [AbstractHandlerExceptionResolver.java:194][http-nio-8098-exec-6] - Resolved [org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: PROCEDURE example.s_getSelectSpecsNameList does not exist
+### The error may exist in file [E:\API-Interface\JAVA\vue\back\target\classes\mapper\GoodsMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: {call s_getSelectSpecsNameList()}
+### Cause: java.sql.SQLSyntaxErrorException: PROCEDURE example.s_getSelectSpecsNameList does not exist
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: PROCEDURE example.s_getSelectSpecsNameList does not exist]
+2020-09-09 09:38:53.065 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting MyApplication on DESKTOP-JOO9PTO with PID 11680 (E:\API-Interface\JAVA\vue\back\target\classes started by dell in E:\API-Interface\JAVA\vue\back)
+2020-09-09 09:38:53.068 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2020-09-09 09:38:54.061 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.1.32] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2020-09-09 09:38:54.172 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.1.32] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2020-09-09 09:38:54.179 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.1.32] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2020-09-09 09:38:54.759 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started MyApplication in 1.915 seconds (JVM running for 3.482)
+2020-09-09 09:39:12.145 INFO  --- [DruidDataSource.java:930][http-nio-8098-exec-4] - {dataSource-1} inited
+2020-09-09 09:39:12.200 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2020-09-09 09:39:12.213 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - ==> Parameters: admin(String), 0dd80a766592f28edddc716cf23ac35f(String)
+2020-09-09 09:39:12.225 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - <==      Total: 1
+2020-09-09 09:39:12.930 WARN  --- [DirectJDKLog.java:173][http-nio-8098-exec-4] - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [699] milliseconds.
+2020-09-09 09:39:12.958 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2020-09-09 09:39:12.959 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - ==> Parameters: admin(String)
+2020-09-09 09:39:12.962 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - <==      Total: 1
+2020-09-09 09:39:12.964 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2020-09-09 09:39:12.965 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - ==> Parameters: 
+2020-09-09 09:39:12.967 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - <==      Total: 25
+2020-09-09 09:39:12.968 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2020-09-09 09:39:12.968 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - ==> Parameters: 
+2020-09-09 09:39:12.969 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - <==      Total: 25
+2020-09-09 09:39:18.476 INFO  --- [UserRealm.java:46][http-nio-8098-exec-2] - permission的值为:{"menuList":["role","file","spu","category","specsname","user","article","specsvalue"],"roleId":1,"nickname":"超级用户23","roleName":"管理员","permissionList":["category:update","user:list","role:update","spu:add","specsvalue:add","spu:update","category:delete","spu:list","role:add","article:list","specsvalue:update","specsname:add","role:list","role:delete","file:upload","user:add","article:add","specsvalue:list","specsvalue:delete","user:update","specsname:list","article:update","specsname:update","category:add","category:list"],"userId":10003}
+2020-09-09 09:39:18.476 INFO  --- [UserRealm.java:47][http-nio-8098-exec-2] - 本用户权限为:[category:update, user:list, role:update, spu:add, specsvalue:add, spu:update, category:delete, spu:list, role:add, article:list, specsvalue:update, specsname:add, role:list, role:delete, file:upload, user:add, article:add, specsvalue:list, specsvalue:delete, user:update, specsname:list, article:update, specsname:update, category:add, category:list]
+2020-09-09 09:39:18.476 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - ==>  Preparing: {call s_getSelectSpecsNameList()} 
+2020-09-09 09:39:18.482 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-5] - ==>  Preparing: {call goods_category_list(?,?,?,?,?,?,?,?)} 
+2020-09-09 09:39:18.489 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - ==> Parameters: 
+2020-09-09 09:39:18.489 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - ==>  Preparing: {call s_goods_spu_list(?,?,?,?,?,?,?,?)} 
+2020-09-09 09:39:18.494 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-5] - ==> Parameters: null, null, null, null, 1(Integer), null, null, 0(Integer)
+2020-09-09 09:39:18.494 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - <==      Total: 5
+2020-09-09 09:39:18.497 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - <==    Updates: 0
+2020-09-09 09:39:18.500 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - ==> Parameters: null, null, (String), null, null, 1(Integer), 50(Integer), 1(Integer)
+2020-09-09 09:39:18.548 ERROR --- [GlobalExceptionHandler.java:43][http-nio-8098-exec-5] - 异常
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: FUNCTION example.fu_getFatherCategoryName does not exist
+### The error may exist in file [E:\API-Interface\JAVA\vue\back\target\classes\mapper\GoodsMapper.xml]
+### The error may involve com.heeexy.example.dao.GoodsDao.goods_category_list-Inline
+### The error occurred while setting parameters
+### SQL: {call goods_category_list(?,?,?,?,?,?,?,?)}
+### Cause: java.sql.SQLSyntaxErrorException: FUNCTION example.fu_getFatherCategoryName does not exist
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: FUNCTION example.fu_getFatherCategoryName does not exist
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:93)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy54.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:230)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:139)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:76)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy74.goods_category_list(Unknown Source)
+	at com.heeexy.example.service.impl.GoodsServiceImpl.selectListCategory(GoodsServiceImpl.java:82)
+	at com.heeexy.example.controller.GoodsController.selectListCategory(GoodsController.java:202)
+	at com.heeexy.example.controller.GoodsController$$FastClassBySpringCGLIB$$4dc075c7.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:684)
+	at com.heeexy.example.controller.GoodsController$$EnhancerBySpringCGLIB$$47baa92b.selectListCategory(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:215)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:142)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.sql.SQLSyntaxErrorException: FUNCTION example.fu_getFatherCategoryName does not exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at com.mysql.cj.jdbc.CallableStatement.execute(CallableStatement.java:845)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:498)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy90.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.CallableStatementHandler.query(CallableStatementHandler.java:67)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:326)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 83 common frames omitted
+2020-09-09 09:39:18.548 ERROR --- [GlobalExceptionHandler.java:43][http-nio-8098-exec-2] - 异常
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: FUNCTION example.fu_getFatherCategoryName does not exist
+### The error may exist in file [E:\API-Interface\JAVA\vue\back\target\classes\mapper\GoodsMapper.xml]
+### The error may involve com.heeexy.example.dao.GoodsDao.s_goods_spu_list-Inline
+### The error occurred while setting parameters
+### SQL: {call s_goods_spu_list(?,?,?,?,?,?,?,?)}
+### Cause: java.sql.SQLSyntaxErrorException: FUNCTION example.fu_getFatherCategoryName does not exist
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: FUNCTION example.fu_getFatherCategoryName does not exist
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:93)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy54.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:230)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:139)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:76)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy74.s_goods_spu_list(Unknown Source)
+	at com.heeexy.example.service.impl.GoodsServiceImpl.s_goods_spu_list(GoodsServiceImpl.java:68)
+	at com.heeexy.example.controller.GoodsController.listSpu(GoodsController.java:167)
+	at com.heeexy.example.controller.GoodsController$$FastClassBySpringCGLIB$$4dc075c7.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.apache.shiro.spring.security.interceptor.AopAllianceAnnotationsAuthorizingMethodInterceptor$1.proceed(AopAllianceAnnotationsAuthorizingMethodInterceptor.java:82)
+	at org.apache.shiro.authz.aop.AuthorizingMethodInterceptor.invoke(AuthorizingMethodInterceptor.java:39)
+	at org.apache.shiro.spring.security.interceptor.AopAllianceAnnotationsAuthorizingMethodInterceptor.invoke(AopAllianceAnnotationsAuthorizingMethodInterceptor.java:115)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.heeexy.example.controller.GoodsController$$EnhancerBySpringCGLIB$$47baa92b.listSpu(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:215)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:142)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:901)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.sql.SQLSyntaxErrorException: FUNCTION example.fu_getFatherCategoryName does not exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at com.mysql.cj.jdbc.CallableStatement.execute(CallableStatement.java:845)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:498)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy90.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.CallableStatementHandler.query(CallableStatementHandler.java:67)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:326)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 89 common frames omitted
+2020-09-09 09:39:18.550 WARN  --- [AbstractHandlerExceptionResolver.java:194][http-nio-8098-exec-5] - Resolved [org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: FUNCTION example.fu_getFatherCategoryName does not exist
+### The error may exist in file [E:\API-Interface\JAVA\vue\back\target\classes\mapper\GoodsMapper.xml]
+### The error may involve com.heeexy.example.dao.GoodsDao.goods_category_list-Inline
+### The error occurred while setting parameters
+### SQL: {call goods_category_list(?,?,?,?,?,?,?,?)}
+### Cause: java.sql.SQLSyntaxErrorException: FUNCTION example.fu_getFatherCategoryName does not exist
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: FUNCTION example.fu_getFatherCategoryName does not exist]
+2020-09-09 09:39:18.551 WARN  --- [AbstractHandlerExceptionResolver.java:194][http-nio-8098-exec-2] - Resolved [org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: FUNCTION example.fu_getFatherCategoryName does not exist
+### The error may exist in file [E:\API-Interface\JAVA\vue\back\target\classes\mapper\GoodsMapper.xml]
+### The error may involve com.heeexy.example.dao.GoodsDao.s_goods_spu_list-Inline
+### The error occurred while setting parameters
+### SQL: {call s_goods_spu_list(?,?,?,?,?,?,?,?)}
+### Cause: java.sql.SQLSyntaxErrorException: FUNCTION example.fu_getFatherCategoryName does not exist
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: FUNCTION example.fu_getFatherCategoryName does not exist]
+2020-09-09 09:51:19.412 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting MyApplication on DESKTOP-JOO9PTO with PID 3936 (E:\API-Interface\JAVA\vue\back\target\classes started by dell in E:\API-Interface\JAVA\vue\back)
+2020-09-09 09:51:19.414 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2020-09-09 09:51:20.429 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.1.32] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2020-09-09 09:51:20.551 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.1.32] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2020-09-09 09:51:20.557 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.1.32] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2020-09-09 09:51:21.132 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started MyApplication in 1.9 seconds (JVM running for 3.413)
+2020-09-09 09:51:33.956 INFO  --- [DruidDataSource.java:930][http-nio-8098-exec-2] - {dataSource-1} inited
+2020-09-09 09:51:34.016 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2020-09-09 09:51:34.030 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - ==> Parameters: admin(String), 0dd80a766592f28edddc716cf23ac35f(String)
+2020-09-09 09:51:34.042 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - <==      Total: 1
+2020-09-09 09:51:34.751 WARN  --- [DirectJDKLog.java:173][http-nio-8098-exec-2] - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [701] milliseconds.
+2020-09-09 09:51:34.783 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-5] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2020-09-09 09:51:34.784 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-5] - ==> Parameters: admin(String)
+2020-09-09 09:51:34.787 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-5] - <==      Total: 1
+2020-09-09 09:51:34.788 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-5] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2020-09-09 09:51:34.789 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-5] - ==> Parameters: 
+2020-09-09 09:51:34.791 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-5] - <==      Total: 25
+2020-09-09 09:51:34.792 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-5] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2020-09-09 09:51:34.793 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-5] - ==> Parameters: 
+2020-09-09 09:51:34.795 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-5] - <==      Total: 25
+2020-09-09 09:51:37.776 INFO  --- [UserRealm.java:46][http-nio-8098-exec-8] - permission的值为:{"menuList":["role","file","spu","category","specsname","user","article","specsvalue"],"roleId":1,"nickname":"超级用户23","roleName":"管理员","permissionList":["category:update","user:list","role:update","spu:add","specsvalue:add","spu:update","category:delete","spu:list","role:add","article:list","specsvalue:update","specsname:add","role:list","role:delete","file:upload","user:add","article:add","specsvalue:list","specsvalue:delete","user:update","specsname:list","article:update","specsname:update","category:add","category:list"],"userId":10003}
+2020-09-09 09:51:37.777 INFO  --- [UserRealm.java:47][http-nio-8098-exec-8] - 本用户权限为:[category:update, user:list, role:update, spu:add, specsvalue:add, spu:update, category:delete, spu:list, role:add, article:list, specsvalue:update, specsname:add, role:list, role:delete, file:upload, user:add, article:add, specsvalue:list, specsvalue:delete, user:update, specsname:list, article:update, specsname:update, category:add, category:list]
+2020-09-09 09:51:37.787 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-8] - ==>  Preparing: {call s_goods_spu_list(?,?,?,?,?,?,?,?)} 
+2020-09-09 09:51:37.798 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-8] - ==> Parameters: null, null, (String), null, null, 1(Integer), 50(Integer), 1(Integer)
+2020-09-09 09:51:37.812 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-8] - <==      Total: 0
+2020-09-09 09:51:37.812 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-8] - <==    Updates: 0
+2020-09-09 09:51:38.075 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - ==>  Preparing: {call s_getSelectSpecsNameList()} 
+2020-09-09 09:51:38.081 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - ==> Parameters: 
+2020-09-09 09:51:38.082 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-10] - ==>  Preparing: {call goods_category_list(?,?,?,?,?,?,?,?)} 
+2020-09-09 09:51:38.084 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - <==      Total: 5
+2020-09-09 09:51:38.084 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - <==    Updates: 0
+2020-09-09 09:51:38.086 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-10] - ==> Parameters: null, null, null, null, 1(Integer), null, null, 0(Integer)
+2020-09-09 09:51:38.090 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-10] - <==      Total: 4
+2020-09-09 09:51:38.091 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-10] - <==    Updates: 0
+2020-09-09 09:52:10.941 INFO  --- [UserRealm.java:46][http-nio-8098-exec-7] - permission的值为:{"menuList":["role","file","spu","category","specsname","user","article","specsvalue"],"roleId":1,"nickname":"超级用户23","roleName":"管理员","permissionList":["category:update","user:list","role:update","spu:add","specsvalue:add","spu:update","category:delete","spu:list","role:add","article:list","specsvalue:update","specsname:add","role:list","role:delete","file:upload","user:add","article:add","specsvalue:list","specsvalue:delete","user:update","specsname:list","article:update","specsname:update","category:add","category:list"],"userId":10003}
+2020-09-09 09:52:10.942 INFO  --- [UserRealm.java:47][http-nio-8098-exec-7] - 本用户权限为:[category:update, user:list, role:update, spu:add, specsvalue:add, spu:update, category:delete, spu:list, role:add, article:list, specsvalue:update, specsname:add, role:list, role:delete, file:upload, user:add, article:add, specsvalue:list, specsvalue:delete, user:update, specsname:list, article:update, specsname:update, category:add, category:list]
+2020-09-09 10:16:53.764 INFO  --- [UserRealm.java:46][http-nio-8098-exec-4] - permission的值为:{"menuList":["role","file","spu","category","specsname","user","article","specsvalue"],"roleId":1,"nickname":"超级用户23","roleName":"管理员","permissionList":["category:update","user:list","role:update","spu:add","specsvalue:add","spu:update","category:delete","spu:list","role:add","article:list","specsvalue:update","specsname:add","role:list","role:delete","file:upload","user:add","article:add","specsvalue:list","specsvalue:delete","user:update","specsname:list","article:update","specsname:update","category:add","category:list"],"userId":10003}
+2020-09-09 10:16:53.765 INFO  --- [UserRealm.java:47][http-nio-8098-exec-4] - 本用户权限为:[category:update, user:list, role:update, spu:add, specsvalue:add, spu:update, category:delete, spu:list, role:add, article:list, specsvalue:update, specsname:add, role:list, role:delete, file:upload, user:add, article:add, specsvalue:list, specsvalue:delete, user:update, specsname:list, article:update, specsname:update, category:add, category:list]
+2020-09-09 10:16:53.769 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - ==>  Preparing: {call s_getSelectSpecsNameList()} 
+2020-09-09 10:16:53.770 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-9] - ==>  Preparing: {call goods_category_list(?,?,?,?,?,?,?,?)} 
+2020-09-09 10:16:53.771 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - ==>  Preparing: {call s_goods_spu_list(?,?,?,?,?,?,?,?)} 
+2020-09-09 10:16:53.773 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - ==> Parameters: 
+2020-09-09 10:16:53.775 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-9] - ==> Parameters: null, null, null, null, 1(Integer), null, null, 0(Integer)
+2020-09-09 10:16:53.775 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - <==      Total: 5
+2020-09-09 10:16:53.775 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - ==> Parameters: null, null, (String), null, null, 1(Integer), 50(Integer), 1(Integer)
+2020-09-09 10:16:53.776 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - <==    Updates: 0
+2020-09-09 10:16:53.777 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - <==      Total: 0
+2020-09-09 10:16:53.777 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-9] - <==      Total: 4
+2020-09-09 10:16:53.778 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-9] - <==    Updates: 0
+2020-09-09 10:16:53.778 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - <==    Updates: 0
+2020-09-09 10:19:43.773 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2020-09-09 10:19:43.774 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - ==> Parameters: admin(String)
+2020-09-09 10:19:43.777 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - <==      Total: 1
+2020-09-09 10:19:43.779 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2020-09-09 10:19:43.780 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - ==> Parameters: 
+2020-09-09 10:19:43.781 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - <==      Total: 25
+2020-09-09 10:19:43.781 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2020-09-09 10:19:43.782 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - ==> Parameters: 
+2020-09-09 10:19:43.782 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - <==      Total: 25
+2020-09-09 10:19:43.927 INFO  --- [UserRealm.java:46][http-nio-8098-exec-2] - permission的值为:{"menuList":["role","file","spu","category","specsname","user","article","specsvalue"],"roleId":1,"nickname":"超级用户23","roleName":"管理员","permissionList":["category:update","user:list","role:update","spu:add","specsvalue:add","spu:update","category:delete","spu:list","role:add","article:list","specsvalue:update","specsname:add","role:list","role:delete","file:upload","user:add","article:add","specsvalue:list","specsvalue:delete","user:update","specsname:list","article:update","specsname:update","category:add","category:list"],"userId":10003}
+2020-09-09 10:19:43.928 INFO  --- [UserRealm.java:47][http-nio-8098-exec-2] - 本用户权限为:[category:update, user:list, role:update, spu:add, specsvalue:add, spu:update, category:delete, spu:list, role:add, article:list, specsvalue:update, specsname:add, role:list, role:delete, file:upload, user:add, article:add, specsvalue:list, specsvalue:delete, user:update, specsname:list, article:update, specsname:update, category:add, category:list]
+2020-09-09 10:19:43.928 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - ==>  Preparing: {call s_goods_spu_list(?,?,?,?,?,?,?,?)} 
+2020-09-09 10:19:43.932 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - ==> Parameters: null, null, (String), null, null, 1(Integer), 50(Integer), 1(Integer)
+2020-09-09 10:19:43.933 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - <==      Total: 0
+2020-09-09 10:19:43.934 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - <==    Updates: 0
+2020-09-09 10:19:44.230 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-5] - ==>  Preparing: {call goods_category_list(?,?,?,?,?,?,?,?)} 
+2020-09-09 10:19:44.231 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-8] - ==>  Preparing: {call s_getSelectSpecsNameList()} 
+2020-09-09 10:19:44.232 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-5] - ==> Parameters: null, null, null, null, 1(Integer), null, null, 0(Integer)
+2020-09-09 10:19:44.234 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-8] - ==> Parameters: 
+2020-09-09 10:19:44.235 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-5] - <==      Total: 4
+2020-09-09 10:19:44.236 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-8] - <==      Total: 5
+2020-09-09 10:19:44.236 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-5] - <==    Updates: 0
+2020-09-09 10:19:44.237 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-8] - <==    Updates: 0
+2020-09-09 10:45:35.415 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2020-09-09 10:45:35.416 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - ==> Parameters: admin(String)
+2020-09-09 10:45:35.419 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - <==      Total: 1
+2020-09-09 10:45:35.420 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2020-09-09 10:45:35.420 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - ==> Parameters: 
+2020-09-09 10:45:35.421 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - <==      Total: 25
+2020-09-09 10:45:35.422 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2020-09-09 10:45:35.422 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - ==> Parameters: 
+2020-09-09 10:45:35.423 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-6] - <==      Total: 25
+2020-09-09 10:45:35.589 INFO  --- [UserRealm.java:46][http-nio-8098-exec-10] - permission的值为:{"menuList":["role","file","spu","category","specsname","user","article","specsvalue"],"roleId":1,"nickname":"超级用户23","roleName":"管理员","permissionList":["category:update","user:list","role:update","spu:add","specsvalue:add","spu:update","category:delete","spu:list","role:add","article:list","specsvalue:update","specsname:add","role:list","role:delete","file:upload","user:add","article:add","specsvalue:list","specsvalue:delete","user:update","specsname:list","article:update","specsname:update","category:add","category:list"],"userId":10003}
+2020-09-09 10:45:35.590 INFO  --- [UserRealm.java:47][http-nio-8098-exec-10] - 本用户权限为:[category:update, user:list, role:update, spu:add, specsvalue:add, spu:update, category:delete, spu:list, role:add, article:list, specsvalue:update, specsname:add, role:list, role:delete, file:upload, user:add, article:add, specsvalue:list, specsvalue:delete, user:update, specsname:list, article:update, specsname:update, category:add, category:list]
+2020-09-09 10:45:35.591 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-10] - ==>  Preparing: {call s_goods_spu_list(?,?,?,?,?,?,?,?)} 
+2020-09-09 10:45:35.596 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-10] - ==> Parameters: null, null, (String), null, null, 1(Integer), 50(Integer), 1(Integer)
+2020-09-09 10:45:35.598 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-10] - <==      Total: 0
+2020-09-09 10:45:35.599 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-10] - <==    Updates: 0
+2020-09-09 10:45:35.892 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - ==>  Preparing: {call s_getSelectSpecsNameList()} 
+2020-09-09 10:45:35.893 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-7] - ==>  Preparing: {call goods_category_list(?,?,?,?,?,?,?,?)} 
+2020-09-09 10:45:35.894 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - ==> Parameters: 
+2020-09-09 10:45:35.895 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - <==      Total: 5
+2020-09-09 10:45:35.896 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-3] - <==    Updates: 0
+2020-09-09 10:45:35.896 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-7] - ==> Parameters: null, null, null, null, 1(Integer), null, null, 0(Integer)
+2020-09-09 10:45:35.898 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-7] - <==      Total: 4
+2020-09-09 10:45:35.899 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-7] - <==    Updates: 0
+2020-09-09 10:45:37.482 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-9] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2020-09-09 10:45:37.483 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-9] - ==> Parameters: admin(String)
+2020-09-09 10:45:37.487 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-9] - <==      Total: 1
+2020-09-09 10:45:37.488 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-9] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2020-09-09 10:45:37.488 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-9] - ==> Parameters: 
+2020-09-09 10:45:37.489 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-9] - <==      Total: 25
+2020-09-09 10:45:37.490 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-9] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2020-09-09 10:45:37.490 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-9] - ==> Parameters: 
+2020-09-09 10:45:37.491 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-9] - <==      Total: 25
+2020-09-09 10:45:37.638 INFO  --- [UserRealm.java:46][http-nio-8098-exec-4] - permission的值为:{"menuList":["role","file","spu","category","specsname","user","article","specsvalue"],"roleId":1,"nickname":"超级用户23","roleName":"管理员","permissionList":["category:update","user:list","role:update","spu:add","specsvalue:add","spu:update","category:delete","spu:list","role:add","article:list","specsvalue:update","specsname:add","role:list","role:delete","file:upload","user:add","article:add","specsvalue:list","specsvalue:delete","user:update","specsname:list","article:update","specsname:update","category:add","category:list"],"userId":10003}
+2020-09-09 10:45:37.638 INFO  --- [UserRealm.java:47][http-nio-8098-exec-4] - 本用户权限为:[category:update, user:list, role:update, spu:add, specsvalue:add, spu:update, category:delete, spu:list, role:add, article:list, specsvalue:update, specsname:add, role:list, role:delete, file:upload, user:add, article:add, specsvalue:list, specsvalue:delete, user:update, specsname:list, article:update, specsname:update, category:add, category:list]
+2020-09-09 10:45:37.639 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - ==>  Preparing: {call s_goods_spu_list(?,?,?,?,?,?,?,?)} 
+2020-09-09 10:45:37.642 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - ==> Parameters: null, null, (String), null, null, 1(Integer), 50(Integer), 1(Integer)
+2020-09-09 10:45:37.643 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - <==      Total: 0
+2020-09-09 10:45:37.643 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-4] - <==    Updates: 0
+2020-09-09 10:45:37.940 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - ==>  Preparing: {call goods_category_list(?,?,?,?,?,?,?,?)} 
+2020-09-09 10:45:37.940 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - ==>  Preparing: {call s_getSelectSpecsNameList()} 
+2020-09-09 10:45:37.942 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - ==> Parameters: 
+2020-09-09 10:45:37.942 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - ==> Parameters: null, null, null, null, 1(Integer), null, null, 0(Integer)
+2020-09-09 10:45:37.943 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - <==      Total: 5
+2020-09-09 10:45:37.944 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-2] - <==    Updates: 0
+2020-09-09 10:45:37.944 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - <==      Total: 4
+2020-09-09 10:45:37.944 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8098-exec-1] - <==    Updates: 0

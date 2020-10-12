@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.heeexy.example.dao.GoodsDao">
+
+    <!--查询商品规格名列表-->
+    <select id="s_specs_name_list" resultType="com.alibaba.fastjson.JSONObject" parameterType="java.util.Map"  statementType="CALLABLE" >
+     {call s_specs_name_list(#{pageNum},#{pageRow},#{keyword},#{specsnameid},#{isLimit})}
+	</select>
+
+    <!--操作商品规格名列表-->
+    <select id="aud_specs_name" resultType="com.alibaba.fastjson.JSONObject" parameterType="java.util.Map"  statementType="CALLABLE" >
+     {call aud_specs_name(#{specsNameId},#{specsname},#{specsdescription},#{specsstandard},#{specsunit},#{type})}
+	</select>
+
+
+    <!--查询商品规格值列表-->
+    <select id="s_specs_value_list" resultType="com.alibaba.fastjson.JSONObject" parameterType="java.util.Map"  statementType="CALLABLE" >
+     {call s_specs_value_list(#{pageNum},#{pageRow},#{keyword},#{specsvalueid},#{specsnameid},#{isLimit})}
+	</select>
+
+    <!--操作商品规格值列表-->
+    <select id="aud_specs_value" resultType="com.alibaba.fastjson.JSONObject" parameterType="java.util.Map"  statementType="CALLABLE" >
+     {call aud_specs_value(#{specsvalueid},#{specsvalue},#{specsextend},#{specsnameid},#{type})}
+	</select>
+
+
+    <!--操作商品分类列表-->
+    <select id="aud_goods_category" resultType="com.alibaba.fastjson.JSONObject" parameterType="java.util.Map"  statementType="CALLABLE" >
+     {call aud_goods_category(#{categoryid},#{categoryname},#{categoryimg},#{categorydescribe},#{isusables},#{isparents},#{parentid},#{type})}
+	</select>
+
+
+    <!--查询商品分类列表-->
+    <select id="goods_category_list" resultType="com.alibaba.fastjson.JSONObject" parameterType="java.util.Map"  statementType="CALLABLE" >
+     {call goods_category_list(#{pageNum},#{pageRow},#{categoryid},#{keyword},#{isusables},#{isparents},#{parentid},#{isLimit})}
+	</select>
+
+    <!--查询商品spu列表-->
+    <select id="s_goods_spu_list" resultType="com.alibaba.fastjson.JSONObject" parameterType="java.util.Map"  statementType="CALLABLE" >
+     {call s_goods_spu_list(#{spuid},#{categoryid},#{keyword},#{onlines},#{rootcategoryid},#{pageNum},#{pageRow},#{isLimit})}
+	</select>
+
+    <!--操作商品spu列表-->
+    <select id="aud_goods_spu" resultType="com.alibaba.fastjson.JSONObject" parameterType="java.util.Map"  statementType="CALLABLE" >
+     {call aud_goods_spu(#{spuid},#{categoryid},#{discountprice},#{forthemeimg},#{spuimg},#{spuonline},#{spuprice},#{rootcategoryid},#{sketchspecid},#{sketchspecname},#{spusubtitle},#{sputags},#{sputitle},#{bannerimgs},#{spudetails},#{specsjson},#{type})}
+	</select>
+
+    <!--查询所有规格名，商品添加使用-->
+    <select id="s_getSelectSpecsNameList" resultType="com.alibaba.fastjson.JSONObject"  statementType="CALLABLE" >
+     {call s_getSelectSpecsNameList()}
+	</select>
+
+
+</mapper>
