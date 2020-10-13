@@ -7,7 +7,7 @@ spring:
     name: example
   servlet:
     multipart:
-      max-file-size: 100MB # 最大支持文件大小
+      max-file-size: 100MB # 最大支持文件大小23
       max-request-size: 100MB # 最大支持请求大小
   datasource:
       url: jdbc:mysql://127.0.0.1:3306/example?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
